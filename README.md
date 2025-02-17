@@ -23,11 +23,17 @@ pip install fastapi[all] sqlalchemy passlib bcrypt jwt
 ```
 
 This command will install:
+
 -FastAPI – API framework
+
 -Uvicorn – server for API loading
+
 -SQLAlchemy – for work with DB
+
 -Passlib (bcrypt) – password hashing
+
 -JWT (pyjwt) – authentification with tokens
+
 
 **2. API starting**
 
