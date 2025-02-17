@@ -3,23 +3,24 @@
 **1. Dependencies**
 
 1.1. Check Python installation
-
+```
 python --version
-
+```
 If it's not installed, please install Python from official site.
 
 1.2. Check 'pip' installation
-
+```
 python -m pip --version
-
+```
 If it's not installed write the following
-
+```
 python -m ensurepip --default-pip
 python -m pip install --upgrade pip
-
+```
 1.3. Install all dependencies
-
+```
 pip install fastapi[all] sqlalchemy passlib bcrypt jwt
+```
 
 This command will install:
 -FastAPI – API framework
@@ -28,33 +29,30 @@ This command will install:
 -Passlib (bcrypt) – password hashing
 -JWT (pyjwt) – authentification with tokens
 
-2. API starting
+**2. API starting**
 
 Start API from main.py
-
+```
 cd /d D:/Example/Test (main.py folder path)
 uvicorn main:app --reload
-
+```
 Now server is open at http://127.0.0.1:8000
 
-3. Test with Postman application
+**3. Test with Postman application**
+-Install Postman application from official site
+-On the Home page click **New request**
 
 3.1. POST /register
 
 -Follow URL http://127.0.0.1:8000/register
 
 -In the Body -> raw -> JSON write:
-
-{
-    "email": "example@gmail.com",
-    "password": "qwerty"
-}
-
-![image](https://github.com/user-attachments/assets/35324db1-62df-4700-8866-63ca7695a426)
+![image](https://github.com/user-attachments/assets/d45085ca-4d2f-4d61-b822-e3ae5efffacf)
 
 -Click 'Send'
 
 -Server answer should be:
+
 ![image](https://github.com/user-attachments/assets/052215c1-9796-4fd5-b4ae-d69362c17365)
 
 3.2. POST /login
@@ -67,6 +65,7 @@ Now server is open at http://127.0.0.1:8000
 -Click 'Send'
 
 -Server answer should be:
+
 ![image](https://github.com/user-attachments/assets/1272ddf0-b113-4272-af3a-ca593605cf6b)
 
 3.3. GET /private-data
@@ -80,6 +79,7 @@ Now server is open at http://127.0.0.1:8000
 -Click 'Send'
 
 -Server answer should be:
+
 ![image](https://github.com/user-attachments/assets/22755956-d456-4e67-83b6-03cacc8c382d)
 
 3.4. GET /public-data
@@ -89,5 +89,6 @@ Now server is open at http://127.0.0.1:8000
 -Click 'Send'
 
 -Server answer should be:
+
 ![image](https://github.com/user-attachments/assets/791eb0e8-2f18-4fa4-bccf-66a96983f640)
 
